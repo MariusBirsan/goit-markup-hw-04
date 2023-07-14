@@ -1,0 +1,294 @@
+/*==========common styling==========*/
+:root {
+  --text-font-family: "Roboto", sans-serif;
+  --logo-font-family: "Raleway", sans-serif;
+  --heading-color: #212121;
+  --text-color: #757575;
+  --hover-color: #2196f3;
+  --backround-text-color: #fff;
+}
+
+body {
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.container {
+  display: block;
+  margin: 0 calc((100% - 1600px) / 2) 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--text-font-family);
+  color: var(--heading-color);
+  font-size: 0.875em;
+}
+
+.logo {
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  font-size: 1.625em;
+  margin-left: 215px;
+}
+
+.logo span {
+  color: var(--hover-color);
+}
+
+.top {
+  color: var(--heading-color);
+}
+
+.bottom {
+  color: var(--backround-text-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--hover-color);
+}
+
+.filter:hover,
+.filter:focus {
+  background-color: var(--hover-color);
+  color: var(--backround-text-color);
+}
+
+header a {
+  font-weight: 500;
+}
+
+footer a {
+  font-weight: 400;
+}
+
+address {
+  font-size: 0.875em;
+  color: var(--backround-text-color);
+}
+
+.bottom-mail,
+.bottom-phone {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+  cursor: pointer;
+}
+
+.active {
+  color: var(--link-color);
+}
+
+.top-mail,
+.top-phone {
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  color: var(--text-color);
+  line-height: 1.5em;
+  font-weight: 400;
+  font-size: 0.875em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding-left: 92px;
+  margin-right: 385px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 251px;
+}
+
+footer ul {
+  margin-top: 25px;
+  padding-left: 215px;
+  line-height: 25px;
+}
+
+/*==========Studio styling==========*/
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.about-section h1 {
+  font-size: 2.75em;
+  color: var(--backround-text-color);
+  width: 600px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-section button {
+  width: 12.5em;
+  height: 3.125em;
+  background-color: var(--hover-color);
+  color: var(--backround-text-color);
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 0.25em;
+  border-width: 0;
+}
+
+.about-section,
+footer {
+  background-color: #2f303a;
+}
+
+.top-phone {
+  margin-left: 40px;
+}
+
+.activities-section {
+  font-size: 0.875em;
+  height: 769px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.activities-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1170px;
+}
+
+.activities-section h3,
+.activities-section p {
+  width: 220px;
+}
+
+.activities-section h2 {
+  margin-bottom: -40px;
+}
+
+.description {
+  gap: 30px;
+}
+
+.team-section {
+  height: 648px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f4fa;
+}
+
+.team-section ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0;
+}
+
+.team-section div {
+  background-color: var(--backround-text-color);
+  height: 368px;
+}
+
+.team-section h3,
+.team-section p {
+  text-align: center;
+}
+
+/*==========Portofolio styling==========*/
+
+.filters ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 94px;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+.filter {
+  border-radius: 0.25em;
+  height: 2.375em;
+  background-color: #f5f4fa;
+  border-width: 0;
+}
+
+.projects ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 30px;
+  padding-left: 215px;
+  margin-bottom: 94px;
+}
+
+.projects div {
+  margin-top: -10px;
+  padding-top: 10px;
+  border: 1px solid #eee;
+  border-top: 0;
+}
+
+.projects h3,
+.projects p {
+  margin-left: 24px;
+}
+
+.first {
+  width: 4em;
+}
+
+.second {
+  width: 7.5em;
+}
+
+.third {
+  width: 5.1875em;
+}
+
+.forth {
+  width: 6em;
+}
+
+.fifth {
+  width: 7.5625em;
+}
+
+.line {
+  height: 1px;
+  width: 1600px;
+  background: #ececec;
+}
