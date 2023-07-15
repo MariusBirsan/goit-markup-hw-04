@@ -12,6 +12,7 @@ body {
   font-family: var(--text-font-family);
   font-weight: 700;
   color: var(--heading-color);
+  background-color: var(--backround-text-color);
 }
 
 .container {
@@ -64,12 +65,23 @@ header a {
   font-weight: 500;
 }
 
+.top-mail,
+.top-phone {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 footer a {
   font-weight: 400;
 }
 
 address {
   font-size: 0.875em;
+  font-style: normal;
+  font-weight: 400;
   color: var(--backround-text-color);
 }
 
@@ -82,13 +94,14 @@ button {
   cursor: pointer;
 }
 
-.active {
-  color: var(--link-color);
+.envelope {
+  height: 12px;
+  width: 16px;
 }
 
-.top-mail,
-.top-phone {
-  color: var(--text-color);
+.smartphone {
+  height: 16px;
+  width: 10px;
 }
 
 h2 {
@@ -123,15 +136,48 @@ nav ul {
 
 footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   height: 251px;
+  align-items: center;
 }
 
 footer ul {
   margin-top: 25px;
   padding-left: 215px;
   line-height: 25px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 94px;
+  color: var(--backround-text-color);
+  margin-bottom: 60px;
+}
+
+.social-media h3 {
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.42px;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.social-media-icons .team-icons-border {
+  height: 44px;
+  width: 44px;
+  border-radius: 22px;
+  color: var(--backround-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*==========Studio styling==========*/
@@ -142,6 +188,7 @@ footer ul {
   justify-content: center;
   align-items: center;
   height: 600px;
+  background: linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/images/background-image.jpg);
 }
 
 .about-section h1 {
@@ -188,7 +235,7 @@ footer {
   justify-content: space-evenly;
   width: 1170px;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   padding: 0;
 }
 
@@ -222,6 +269,7 @@ footer {
   background-color: #f5f4fa;
   padding: 25px;
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .abilities div svg {
@@ -241,11 +289,11 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   background-color: #f5f4fa;
 }
 
-.team-section h2{
+.team-section h2 {
   margin-top: 94px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -263,7 +311,8 @@ footer {
   height: 428px;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .team-icons {
@@ -278,21 +327,19 @@ footer {
   height: 44px;
   width: 44px;
   border-radius: 22px;
-}
-
-.team-icons svg {
-  height: 20px;
-  width: 20px;
-}
-
-.team-icons-border {
   color: #afb1b8;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.team-icons-border:hover {
+.social-icons {
+  height: 20px;
+  width: 20px;
+}
+
+.team-icons-border:hover,
+.team-icons-border:focus {
   color: var(--backround-text-color);
   background-color: var(--hover-color);
   border: 22px;
@@ -310,21 +357,36 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   padding: 0;
   margin-bottom: 94px;
 }
 
-.customers-icons {
+.customers-logo-containers {
   height: 92px;
   width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+}
+
+.customers-icons {
+  height: 60px;
+  width: 106px;
 }
 
 .customers h2 {
   margin-top: 94px;
 }
 
-
+.customers-logo-containers:hover,
+.customers-logo-containers:focus {
+  color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+}
 
 /*==========Portofolio styling==========*/
 
@@ -343,6 +405,12 @@ footer {
   height: 2.375em;
   background-color: #f5f4fa;
   border-width: 0;
+  font-weight: 500;
+}
+
+.filter:hover,
+.filter:focus {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .projects ul {
@@ -355,11 +423,21 @@ footer {
   margin-bottom: 94px;
 }
 
-.projects div {
+.projects-description {
   margin-top: -10px;
   padding-top: 10px;
   border: 1px solid #eee;
   border-top: 0;
+  padding-top: 0;
+}
+
+.projects-description:hover,
+.projects-description:focus {
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .projects h3,
